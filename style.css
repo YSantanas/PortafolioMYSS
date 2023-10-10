@@ -102,6 +102,8 @@ h3 {
   align-content: center;
   font-family: "Latin Modern Roman";
   font-style: italic;
+  width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
+
 }
 .nav ul {
   list-style: none;
