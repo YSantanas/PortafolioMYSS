@@ -171,11 +171,16 @@ h3 {
     text-align: center;
   }
 
+  .contenedor-opciones img {
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+
   .nav li {
     display: block; /* Muestra los elementos uno debajo del otro en pantallas más pequeñas */
     margin-bottom: 10px; /* Espacio entre elementos en pantallas más pequeñas */
   }
 }
+
 
 
 .contenedor-burbujas {
