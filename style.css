@@ -73,7 +73,7 @@ h3 {
   flex-direction: column; /* Apila los elementos verticalmente */
   align-items: center; /* Centra verticalmente el contenido */
   z-index: 2;
-  height: 10%;
+  height: auto%;
 }
 
 .contenedor-opcionesInt img {
