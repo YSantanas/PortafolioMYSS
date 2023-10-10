@@ -36,8 +36,9 @@ h3 {
   justify-content: center; /* Alinea el contenido en el centro horizontalmente */
   align-items: center;
   z-index: 2;
-  height: 10%;
+  height: auto; /* El contenedor se ajustará a la altura de su contenido */
 }
+
 
 .contenedor-opciones img {
   width: 9%; /* Establece el ancho al 100% del contenedor */
