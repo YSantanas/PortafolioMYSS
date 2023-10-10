@@ -168,18 +168,20 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
   }
 
   .contenedor-opciones img {
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin: 0; /* Elimina cualquier margen de la imagen */
   }
 
   .nav li {
-    display: block; /* Muestra los elementos uno debajo del otro en pantallas más pequeñas */
-    margin-bottom: 10px; /* Espacio entre elementos en pantallas más pequeñas */
+    display: block;
+    margin-bottom: 10px;
   }
 }
+
 
 
 
