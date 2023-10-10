@@ -161,19 +161,17 @@ h3 {
 .nav a:hover {
   color: #8f029f;
 }
-
-/* Estilos para pantallas pequeñas utilizando Media Query */
 @media (max-width: 768px) {
   .contenedor-opciones {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
   }
 
-  .contenedor-opciones img {
-    margin: 0; /* Elimina cualquier margen de la imagen */
+  .nav {
+    list-style: none;
+    padding: 0;
   }
 
   .nav li {
