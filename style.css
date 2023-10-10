@@ -26,7 +26,7 @@ h3 {
 /* Estilo para el contenedor del nav */
 .contenedor-opciones {
   position: absolute;
-  background-color: rgba(253, 250, 252, 0.727); /* Fondo oscuro con opacidad */
+  background-color: rgba(253, 250, 252, 0.827); /* Fondo oscuro con opacidad */
   backdrop-filter: blur(40%); /* Desenfoque para el fondo */
   text-align: center;
   margin-top: 2%;
