@@ -1,0 +1,364 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+    to top,
+    /* Cambia a to top para el degradado de abajo hacia arriba */
+      rgb(241, 220, 251) 5%,
+    rgb(252, 251, 252) 80%
+  );
+
+  overflow: hidden;
+}
+
+h1 {
+  color: brown;
+}
+
+h3 {
+  color: aqua;
+}
+
+.imagenInicial {
+  width: 200px;
+  height: auto;
+}
+
+/* Estilo para el contenedor del nav */
+.contenedor-opciones {
+  position: absolute;
+  background-color: rgba(253, 250, 252, 0.727); /* Fondo oscuro con opacidad */
+  backdrop-filter: blur(40%); /* Desenfoque para el fondo */
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Alinea el contenido en el centro horizontalmente */
+  align-items: center;
+  z-index: 2;
+  height: 10%;
+}
+
+.contenedor-opciones img {
+  width: 9%; /* Establece el ancho al 100% del contenedor */
+  max-width: 10%; /* Establece el ancho máximo de la imagen */
+  height: auto; /* Mantiene la relación de aspecto original */
+  padding: 2%;
+}
+
+/* Establece el tamaño mínimo para la imagen en pantallas pequeñas */
+@media (max-width: 480px) {
+  .contenedor-opciones img {
+    min-width: 10%; /* Establece el ancho mínimo de la imagen */
+    width: auto; /* Restablece el ancho automático */
+    max-width: 15%; /* Asegura que la imagen no se desborde del contenedor */
+  }
+}
+
+/* 
+=====================================================
+*/
+/* Estilo para el contenedor del nav */
+.contenedor-opcionesInt {
+  max-width: 1200px; /* Establece un ancho máximo */
+  margin: 0 auto; /* Centra horizontalmente */
+  position: absolute;
+  background-color: rgba(253, 250, 252, 0.727); /* Fondo oscuro con opacidad */
+  backdrop-filter: blur(40%); /* Desenfoque para el fondo */
+  margin-top: 2%; /* Ajusta según sea necesario */
+  margin-bottom: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra verticalmente el contenido */
+  z-index: 2;
+  height: 10%;
+}
+
+.contenedor-opcionesInt img {
+  width: 9%; /* Establece el ancho al 100% del contenedor */
+  max-width: 10%; /* Establece el ancho máximo de la imagen */
+  height: auto; /* Mantiene la relación de aspecto original */
+}
+
+/* Establece el tamaño mínimo para la imagen en pantallas pequeñas */
+@media (max-width: 480px) {
+  .contenedor-opcionesInt img {
+    max-width: 100%; /* Ancho máximo para pantallas grandes */
+    min-width: 10%; /* Establece el ancho mínimo de la imagen */
+    width: auto; /* Restablece el ancho automático */
+  }
+}
+
+
+.logo-interior {
+  width: 60px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  align-content: center;
+  font-family: "Latin Modern Roman";
+  font-style: italic;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.nav li {
+  display: inline;
+  list-style: outside none none;
+  margin: 0 20px;
+}
+
+
+.nav a {
+  padding: 0.5em 0.8em;
+  color: rgb(0, 0, 0);
+  position: relative;
+  text-decoration: none;
+  font-size: 18px; /* Cambia el tamaño de las letras a 24px o el valor que prefieras */
+}
+
+.nav a::before,
+.nav a::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 3px solid #8f029f;
+  border-right: 3px solid #8f029f;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #8f029f;
+  border-left: 3px solid #8f029f;
+  transform: translate(100%, -50%);
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #8f029f;
+}
+
+/* Estilos para pantallas pequeñas utilizando Media Query */
+@media (max-width: 768px) {
+  .contenedor-opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+
+}
+
+.contenedor-burbujas {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.burbujas {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; /* Permite que las burbujas se envuelvan en múltiples líneas en pantallas pequeñas */
+  justify-content: center; /* Centra las burbujas horizontalmente */
+  align-items: center; /* Centra las burbujas verticalmente */
+}
+
+.burbujas span {
+  position: relative;
+  width: 1%; /* Tamaño relativo al ancho del contenedor */
+  padding-bottom: 1%; /* Mantén la relación de aspecto cuadrada */
+  background-color: rgb(195, 80, 240);
+  margin: 1%; /* Margen entre burbujas */
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px rgb(214, 185, 233), 0 0 5px rgb(246, 210, 239),
+    0 0 10px rgb(247, 183, 237);
+
+  animation: animacionBurbuja 15s linear infinite;
+
+  animation-duration: calc(150s / var(--i));
+}
+
+.burbujas span:nth-child(even) {
+  background-color: rgb(103, 11, 123);
+  box-shadow: 0 0 0 2px rgb(217, 217, 224), 0 0 5px rgb(243, 167, 235),
+    0 0 10px rgb(240, 205, 242);
+  animation: animacionBurbuja 15s linear infinite;
+  animation-duration: calc(130s / var(--i));
+}
+
+@keyframes animacionBurbuja {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .burbujas span {
+    width: 1%; /* Ajusta el tamaño para dispositivos móviles */
+    padding-bottom: 1%;
+  }
+  .burbujas span:nth-child(even) {
+    /* Estilos para las burbujas pares en dispositivos móviles */
+  }
+}
+
+/* BURBUJAS OTRA DIRECCION */
+
+.contenedor-burbujas-dos {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.burbujas-dos {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; /* Permite que las burbujas se envuelvan en múltiples líneas en pantallas pequeñas */
+  justify-content: center; /* Centra las burbujas horizontalmente */
+  align-items: center; /* Centra las burbujas verticalmente */
+}
+
+.burbujas-dos span {
+  position: relative;
+  width: 1%; /* Tamaño relativo al ancho del contenedor */
+  padding-bottom: 1%; /* Mantén la relación de aspecto cuadrada */
+  background-color: rgb(186, 127, 237);
+  margin: 1%; /* Margen entre burbujas */
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px rgb(217, 217, 224), 0 0 5px rgb(165, 117, 248),
+    0 0 10px rgb(186, 87, 240);
+
+  animation: animacionBurbujaDos 15s linear infinite;
+
+  animation-duration: calc(150s / var(--i));
+}
+
+.burbujas-dos span:nth-child(even) {
+  background-color: rgb(224, 190, 252);
+  box-shadow: 0 0 0 1px rgb(186, 122, 251), 0 0 3px rgb(153, 0, 255),
+    0 0 5px rgb(185, 28, 243);
+  animation: animacionBurbujaDos 15s linear infinite;
+  animation-duration: calc(230s / var(--i));
+}
+
+@keyframes animacionBurbujaDos {
+  100% {
+    transform: translateY(100vh) scale(0);
+  }
+  0% {
+    transform: translateY(-100vh) scale(1);
+  }
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .burbujas-dos span {
+    width: 1%; /* Ajusta el tamaño para dispositivos móviles */
+    padding-bottom: 1%;
+  }
+  .burbujas-dos span:nth-child(even) {
+    /* Estilos para las burbujas pares en dispositivos móviles */
+  }
+}
+
+/* FIN burbujas */
+
+/* Establecer estilos para el contenido principal */
+main {
+  position: absolute;
+  top: 30%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar completamente el contenido */
+  z-index: 2; /* Asegurarse de que el contenido principal esté encima de las burbujas */
+}
+
+.contenedor-escribir {
+  z-index: 2; /* Asegurarse de que el contenido principal esté encima de las burbujas */
+
+  margin: auto;
+  display: table;
+}
+
+.escribir {
+  display: block;
+  font-family: monospace;
+  border-right: 1px solid #000;
+  white-space: nowrap;
+  width: 100%;
+  animation: escribir 2s steps(10), parpadeo 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+}
+@keyframes parpadeo {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*  SUBTITULOS */
+
+.contenedor-escribirDos {
+  z-index: 2; /* Asegurarse de que el contenido principal esté encima de las burbujas */
+
+  margin: auto;
+  display: table;
+}
+
+.escribirDos {
+  display: block;
+  font-family: monospace;
+  border-right: 1px solid #000;
+  white-space: nowrap;
+  width: 100%;
+  animation: escribir 2s steps(10), parpadeo 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes escribirDos {
+  from {
+    width: 0;
+  }
+}
+@keyframes parpadeoDos {
+  50% {
+    border-color: transparent;
+  }
+}
