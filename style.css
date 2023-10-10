@@ -176,6 +176,8 @@ h3 {
   .nav {
     list-style: none;
     padding: 0;
+    display: block; /* Cambia el display a bloque para que los elementos estén uno encima del otro */
+    text-align: center; /* Centra el texto dentro de cada elemento del menú */
   }
 
   .nav li {
