@@ -163,15 +163,10 @@ h3 {
 
 /* Estilos para pantallas pequeñas utilizando Media Query */
 @media (max-width: 768px) {
-  .contenedor-opciones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 5%;
+  .nav li {
+    display: block; /* Muestra los elementos uno debajo del otro en pantallas más pequeñas */
+    margin-bottom: 10px; /* Espacio entre elementos en pantallas más pequeñas */
   }
-
-
 }
 
 .contenedor-burbujas {
