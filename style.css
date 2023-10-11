@@ -39,6 +39,9 @@ h3 {
 .contenedor-opciones {
   position: relative;
   top: 0; 
+
+  background-color: rgba(253, 250, 252, 0.827); /* Fondo oscuro con opacidad */
+  backdrop-filter: blur(40%); /* Desenfoque para el fondo */
   text-align: center;
   margin-top: 2%;
   margin-bottom: 10%;
@@ -77,64 +80,96 @@ h3 {
   height: auto;
 }
 
+.nav {
+  
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Latin Modern Roman";
+  font-style: italic;
+  width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
 
-/* Estilo para la lista de paginación */
-nav {
-  background-color: rgba(246, 251, 255, 0.893);
-  color: black;
-  text-align: center; /* Alinea el contenido del navbar al centro */
-  overflow: hidden; /* Añadir clearfix para limpiar el float de la imagen */
 }
-
-nav ul {
+.nav ul {
   list-style: none;
   padding: 0;
-  margin: 0; /* Elimina el margen horizontal de la lista */
-  display: inline-block; /* Hacer que la lista sea un bloque en línea */
-  width: auto; /* Ancho automático para ajustarse al contenido */
 }
 
-/* Estilo para los elementos de la lista de paginación */
-nav ul li {
+
+.nav li {
   display: inline;
-  margin-right: 20px;
+  list-style: outside none none;
+  margin: 0 20px;
 }
 
 
-/* Cambiar el color del texto en el navbar a negro */
-nav ul li a {
-  color: black;
-  text-decoration: none; /* Quitar decoración de subrayado de los enlaces */
+.nav a {
+  padding: 0.5em 0.8em;
+  color: rgb(0, 0, 0);
+  position: relative;
+  text-decoration: none;
+  font-size: 18px; /* Cambia el tamaño de las letras a 24px o el valor que prefieras */
 }
 
-
-/* Estilo hover para los elementos de navegación */
-nav a:hover {
-  color: rgb(103, 196, 247); /* Cambia el color del texto al pasar el mouse */
+.nav a::before,
+.nav a::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
 }
 
-/* Estilo para pantallas más pequeñas */
+.nav a::before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 3px solid #8f029f;
+  border-right: 3px solid #8f029f;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #8f029f;
+  border-left: 3px solid #8f029f;
+  transform: translate(100%, -50%);
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #8f029f;
+}
 @media (max-width: 768px) {
-  .logo {
-      width: 20%; /* Hacer que la imagen ocupe el ancho completo en pantallas pequeñas */
-      margin-right: 0;
+  .contenedor-opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  nav ul {
-      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
-      margin: 0; /* Eliminar el margen en pantallas pequeñas */
-      text-align: center; /* Centrar el contenido de la lista */
+  .nav {
+    list-style: none;
+    padding: 0;
+    display: block; /* Cambia el display a bloque para que los elementos estén uno encima del otro */
+    text-align: center; /* Centra el texto dentro de cada elemento del menú */
   }
 
-  nav ul li {
-      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
-      margin-right: 0; /* Eliminar el margen entre elementos */
-      margin-top: 10px;
-      margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
-      margin-right: 10px;
-
-    }
+  .nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
+
 
 
 .contenedor-burbujas {
