@@ -94,6 +94,10 @@ h3 {
 .nav ul {
   list-style: none;
   padding: 0;
+  margin: 0; /* Elimina el margen horizontal de la lista */
+  display: inline-block; /* Hacer que la lista sea un bloque en línea */
+  width: auto; /* Ancho automático para ajustarse al contenido */
+
 }
 
 
@@ -157,17 +161,17 @@ h3 {
     text-align: center;
   }
 
-  .nav {
-    list-style: none;
-    padding: 0;
-    display: block; /* Cambia el display a bloque para que los elementos estén uno encima del otro */
-    text-align: center; /* Centra el texto dentro de cada elemento del menú */
-  }
+  nav ul {
+    display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+    margin: 0; /* Eliminar el margen en pantallas pequeñas */
+    text-align: center; /* Centrar el contenido de la lista */
+}
 
-  .nav li {
-    display: block;
-    margin-bottom: 10px;
-  }
+nav ul li {
+    display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+    margin-right: 0; /* Eliminar el margen entre elementos */
+    margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
+}
 }
 
 
