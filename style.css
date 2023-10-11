@@ -7,7 +7,7 @@ body {
     rgb(252, 251, 252) 80%
   );
 
-   display: grid;
+   display: relative;
 
   flex-direction: column;
   justify-content: space-between;
@@ -17,6 +17,7 @@ body {
 }
 header {
   height: auto;
+
   /* Resto de tus estilos */
 }
 
