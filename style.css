@@ -37,22 +37,18 @@ h3 {
 
 /* Estilo para el contenedor del nav */
 .contenedor-opciones {
-  position: relative;
-  top: 0; 
-
-  background-color: rgba(253, 250, 252, 0.827); /* Fondo oscuro con opacidad */
-  backdrop-filter: blur(40%); /* Desenfoque para el fondo */
-  text-align: center;
-  margin-top: 2%;
-  margin-bottom: 10%;
-  width: 100%;
   display: flex;
-  justify-content: center; /* Alinea el contenido en el centro horizontalmente */
+  justify-content: center;
   align-items: center;
+  position: relative;
+  top: 0;
+  background-color: rgba(253, 250, 252, 0.827);
+  backdrop-filter: blur(40%);
+  width: 100%;
+  height: auto;
   z-index: 10;
-
-  height: auto; /* El contenedor se ajustará a la altura de su contenido */
 }
+
 
 
 .contenedor-opciones img {
