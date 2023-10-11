@@ -92,12 +92,14 @@ h3 {
 
 }
 .nav ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   padding: 0;
-  margin: 0; /* Elimina el margen horizontal de la lista */
-  display: inline-block; /* Hacer que la lista sea un bloque en línea */
-  width: auto; /* Ancho automático para ajustarse al contenido */
-
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 
@@ -154,24 +156,9 @@ h3 {
   color: #8f029f;
 }
 @media (max-width: 768px) {
-  .contenedor-opciones {
-    display: flex;
+  .nav ul {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
-
-  nav ul {
-    display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
-    margin: 0; /* Eliminar el margen en pantallas pequeñas */
-    text-align: center; /* Centrar el contenido de la lista */
-}
-
-nav ul li {
-    display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
-    margin-right: 0; /* Eliminar el margen entre elementos */
-    margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
-}
 }
 
 
