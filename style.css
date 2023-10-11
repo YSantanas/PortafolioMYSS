@@ -80,96 +80,61 @@ h3 {
   height: auto;
 }
 
-.nav {
-  
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  font-family: "Latin Modern Roman";
-  font-style: italic;
-  width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
 
+/* Estilo para la lista de paginación */
+nav {
+  background-color: rgb(220, 238, 249);
+  color: black;
+  text-align: center; /* Alinea el contenido del navbar al centro */
+  overflow: hidden; /* Añadir clearfix para limpiar el float de la imagen */
 }
-.nav ul {
+
+nav ul {
   list-style: none;
   padding: 0;
+  margin: 0; /* Elimina el margen horizontal de la lista */
+  display: inline-block; /* Hacer que la lista sea un bloque en línea */
+  width: auto; /* Ancho automático para ajustarse al contenido */
 }
 
-
-.nav li {
+/* Estilo para los elementos de la lista de paginación */
+nav ul li {
   display: inline;
-  list-style: outside none none;
-  margin: 0 20px;
+  margin-right: 20px;
 }
 
 
-.nav a {
-  padding: 0.5em 0.8em;
-  color: rgb(0, 0, 0);
-  position: relative;
-  text-decoration: none;
-  font-size: 18px; /* Cambia el tamaño de las letras a 24px o el valor que prefieras */
+/* Cambiar el color del texto en el navbar a negro */
+nav ul li a {
+  color: black;
+  text-decoration: none; /* Quitar decoración de subrayado de los enlaces */
 }
 
-.nav a::before,
-.nav a::after {
-  content: "";
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  transition: all 0.35s ease;
-  opacity: 0;
+
+/* Estilo hover para los elementos de navegación */
+nav a:hover {
+  color: rgb(103, 196, 247); /* Cambia el color del texto al pasar el mouse */
 }
 
-.nav a::before {
-  content: "";
-  right: 0;
-  top: 0;
-  border-top: 3px solid #8f029f;
-  border-right: 3px solid #8f029f;
-  transform: translate(-100%, 50%);
-}
-
-.nav a:after {
-  content: "";
-  left: 0;
-  bottom: 0;
-  border-bottom: 3px solid #8f029f;
-  border-left: 3px solid #8f029f;
-  transform: translate(100%, -50%);
-}
-
-.nav a:hover:before,
-.nav a:hover:after {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-.nav a:hover {
-  color: #8f029f;
-}
+/* Estilo para pantallas más pequeñas */
 @media (max-width: 768px) {
-  .contenedor-opciones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .logo {
+      width: 20%; /* Hacer que la imagen ocupe el ancho completo en pantallas pequeñas */
+      margin-right: 0;
   }
 
-  .nav {
-    list-style: none;
-    padding: 0;
-    display: block; /* Cambia el display a bloque para que los elementos estén uno encima del otro */
-    text-align: center; /* Centra el texto dentro de cada elemento del menú */
+  nav ul {
+      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+      margin: 0; /* Eliminar el margen en pantallas pequeñas */
+      text-align: center; /* Centrar el contenido de la lista */
   }
 
-  .nav li {
-    display: block;
-    margin-bottom: 10px;
+  nav ul li {
+      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+      margin-right: 0; /* Eliminar el margen entre elementos */
+      margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
   }
 }
-
 
 
 .contenedor-burbujas {
