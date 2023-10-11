@@ -39,9 +39,6 @@ h3 {
 .contenedor-opciones {
   position: relative;
   top: 0; 
-
-  background-color: rgba(253, 250, 252, 0.827); /* Fondo oscuro con opacidad */
-  backdrop-filter: blur(40%); /* Desenfoque para el fondo */
   text-align: center;
   margin-top: 2%;
   margin-bottom: 10%;
@@ -83,7 +80,7 @@ h3 {
 
 /* Estilo para la lista de paginación */
 nav {
-  background-color: rgb(220, 238, 249);
+  background-color: rgba(246, 251, 255, 0.893);
   color: black;
   text-align: center; /* Alinea el contenido del navbar al centro */
   overflow: hidden; /* Añadir clearfix para limpiar el float de la imagen */
