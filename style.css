@@ -64,6 +64,18 @@ h3 {
     min-width: 10%; /* Establece el ancho mínimo de la imagen */
     width: auto; /* Restablece el ancho automático */
     max-width: 15%; /* Asegura que la imagen no se desborde del contenedor */
+  
+  }
+  .contenedor-opciones {
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(253, 250, 252, 0.827);
+    backdrop-filter: blur(40%);
+    width: 100%;
+    height: auto;
+    z-index: 10;
   }
 }
 
@@ -76,8 +88,10 @@ h3 {
   height: auto;
 }
 
-.nav {
-  
+nav{
+  margin-bottom: 100px; /* Ajusta este valor según tus necesidades */
+  flex-direction: column;
+
   display: flex;
   align-content: center;
   justify-content: center;
@@ -87,7 +101,8 @@ h3 {
   width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
 
 }
-.nav ul {
+
+nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -99,14 +114,14 @@ h3 {
 }
 
 
-.nav li {
+nav li {
   display: inline;
   list-style: outside none none;
   margin: 0 20px;
 }
 
 
-.nav a {
+nav a {
   padding: 0.5em 0.8em;
   color: rgb(0, 0, 0);
   position: relative;
@@ -114,8 +129,8 @@ h3 {
   font-size: 18px; /* Cambia el tamaño de las letras a 24px o el valor que prefieras */
 }
 
-.nav a::before,
-.nav a::after {
+nav a::before,
+nav a::after {
   content: "";
   height: 14px;
   width: 14px;
@@ -124,7 +139,7 @@ h3 {
   opacity: 0;
 }
 
-.nav a::before {
+nav a::before {
   content: "";
   right: 0;
   top: 0;
@@ -133,7 +148,7 @@ h3 {
   transform: translate(-100%, 50%);
 }
 
-.nav a:after {
+nav a:after {
   content: "";
   left: 0;
   bottom: 0;
@@ -142,17 +157,17 @@ h3 {
   transform: translate(100%, -50%);
 }
 
-.nav a:hover:before,
-.nav a:hover:after {
+nav a:hover:before,
+nav a:hover:after {
   transform: translate(0, 0);
   opacity: 1;
 }
 
-.nav a:hover {
+nav a:hover {
   color: #8f029f;
 }
 @media (max-width: 768px) {
-  .nav ul {
+  nav ul {
     flex-direction: column;
   }
 }
