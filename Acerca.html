@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio</title>
-  <link rel="stylesheet" href="../style.css">
+  <link id="tema" rel="stylesheet" href="./style.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 
   <!-- Incluir bootstrap -->
@@ -23,20 +25,26 @@
 
 
   <header>
-<nav>
-    <div class="contenedor-opciones">
+    <nav>
+      <div class="contenedor-opciones">
 
-      <img src="../imagenes/logoPortafolioMini.png" alt="Tu Imagen">
-      <ul class="nav">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./Acerca.html">Acerca</a></li>
-        <li><a href="./Tecnologias.html">Tecnologías</a></li>
-        <li><a href="./Proyectos.html">Proyectos</a></li>
-        <li><a href="./Contacto.html">Contacto</a></li>
-      </ul>
+        <img src="../imagenes/logoPortafolioMini.png" alt="Tu Imagen">
+        <ul class="nav">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./Acerca.html">Acerca</a></li>
+          <li><a href="./Tecnologias.html">Tecnologías</a></li>
+          <li><a href="./Proyectos.html">Proyectos</a></li>
+          <li><a href="./Contacto.html">Contacto</a></li>
+          <li>
+            <button class="btn-luna" id="cambio-tema" onclick="cambioTema()">
+              <i class="fa fa-adjust" aria-hidden="true"></i>
+            </button>
 
-    </div>
-  </nav>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -59,33 +67,38 @@
     </div>
 
     <div class="d-flex justify-content-center">
-      <div class="card my-3 mb-3 w-75" style="max-width: 65%;">
+      <div class="card my-3 mb-3" style="max-width: 55%; border: 2px solid rgba(185, 9, 198, 0.237);">
         <div class="row g-0">
-          <div class="col-md-6">
-            <img src="../imagenes/foto1.jpg" class="img-fluid rounded-start w-100" alt="...">
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="../imagenes/foto1.jpg" class="img-fluid p-1 rounded-3" alt="Soy Yvette">
           </div>
           <div class="col-md-6">
             <div class="card-body">
               <h5 class="card-title">Soy Yvette</h5>
-              <p class="card-text">Disfruto adquirir nuevos conocimientos y habilidades en el ámbito de desarrollo web. Mi experiencia abarca HTML, CSS, JavaScript, React.js y Vue.js. Además, en el campo del desarrollo móvil, cuento con experiencia en Java y Kotlin</p>
+              <p class="card-text">Disfruto adquirir nuevos conocimientos y habilidades en el ámbito de desarrollo web.
+                Mi experiencia abarca HTML, CSS, JavaScript, React.js y Vue.js. Además, en el campo del desarrollo
+                móvil, cuento con experiencia en Java y Kotlin</p>
+
             </div>
-            <div class="card-footer text-center">
+            <div class="card-footer text-center ali">
               <!-- Icono de GitHub -->
               <i class="fab fa-github" style="color: #7e0ee6"></i>
-            
+
               <!-- Icono de LinkedIn -->
               <i class="fab fa-linkedin" style="color: #0e90e6"></i>
-            
+
               <!-- Icono de YouTube -->
               <i class="fab fa-youtube" style="color: #e61c0e"></i>
             </div>
           </div>
-          
         </div>
-        
+
       </div>
     </div>
-    
+
+
+
+
 
   </main>
 
@@ -120,8 +133,17 @@
 
     </div>
   </div>
-
-
+  
+  <script>
+    // Verificar si el usuario ya ha seleccionado el modo oscuro en el pasado y aplicarlo
+    const temaGuardado = localStorage.getItem('tema');
+    if (temaGuardado === 'oscuro') {
+        const themeLink = document.getElementById('tema');
+        themeLink.setAttribute('href', 'styleDark.css');
+    }
+</script>
+ <!-- cambio a tema oscuro -->
+ <script src="./js/cambio.js"></script>
 </body>
 
 </html>

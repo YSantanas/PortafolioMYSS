@@ -3,8 +3,8 @@ body {
   background: linear-gradient(
     to top,
     /* Cambia a to top para el degradado de abajo hacia arriba */
-      rgb(241, 220, 251) 5%,
-    rgb(252, 251, 252) 80%
+      rgb(89, 62, 102) 5%,
+    rgb(30, 27, 30) 80%
   );
 
    display: relative;
@@ -42,7 +42,7 @@ h3 {
   align-items: center;
   position: relative;
   top: 0;
-  background-color: rgba(253, 250, 252, 0.827);
+  background-color: rgba(45, 27, 46, 0.099);
   backdrop-filter: blur(40%);
   width: 100%;
   height: auto;
@@ -71,7 +71,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(253, 250, 252, 0.827);
+    background-color: rgba(39, 38, 38, 0.814);
     backdrop-filter: blur(40%);
     width: 100%;
     height: auto;
@@ -123,7 +123,7 @@ nav li {
 
 nav a {
   padding: 0.5em 0.8em;
-  color: rgb(0, 0, 0);
+  color: rgb(253, 251, 251);
   position: relative;
   text-decoration: none;
   font-size: 18px; /* Cambia el tamaño de las letras a 24px o el valor que prefieras */
@@ -143,8 +143,8 @@ nav a::before {
   content: "";
   right: 0;
   top: 0;
-  border-top: 3px solid #8f029f;
-  border-right: 3px solid #8f029f;
+  border-top: 3px solid #c950d6;
+  border-right: 3px solid #c950d6;
   transform: translate(-100%, 50%);
 }
 
@@ -152,8 +152,8 @@ nav a:after {
   content: "";
   left: 0;
   bottom: 0;
-  border-bottom: 3px solid #8f029f;
-  border-left: 3px solid #8f029f;
+  border-bottom: 3px solid #c950d6;
+  border-left: 3px solid #c950d6;
   transform: translate(100%, -50%);
 }
 
@@ -164,7 +164,7 @@ nav a:hover:after {
 }
 
 nav a:hover {
-  color: #8f029f;
+  color: #c950d6;
 }
 @media (max-width: 768px) {
   nav ul {
@@ -194,11 +194,11 @@ nav a:hover {
   position: relative;
   width: 1%; /* Tamaño relativo al ancho del contenedor */
   padding-bottom: 1%; /* Mantén la relación de aspecto cuadrada */
-  background-color: rgb(195, 80, 240);
+  background-color: rgb(235, 214, 243);
   margin: 1%; /* Margen entre burbujas */
   border-radius: 100%;
   box-shadow: 0 0 0 1px rgb(214, 185, 233), 0 0 5px rgb(246, 210, 239),
-    0 0 10px rgb(247, 183, 237);
+    0 0 10px rgb(236, 215, 233);
 
   animation: animacionBurbuja 15s linear infinite;
 
@@ -206,7 +206,7 @@ nav a:hover {
 }
 
 .burbujas span:nth-child(even) {
-  background-color: rgb(103, 11, 123);
+  background-color: rgb(247, 227, 252);
   box-shadow: 0 0 0 2px rgb(217, 217, 224), 0 0 5px rgb(243, 167, 235),
     0 0 10px rgb(240, 205, 242);
   animation: animacionBurbuja 15s linear infinite;
@@ -255,11 +255,11 @@ nav a:hover {
   position: relative;
   width: 1%; /* Tamaño relativo al ancho del contenedor */
   padding-bottom: 1%; /* Mantén la relación de aspecto cuadrada */
-  background-color: rgb(186, 127, 237);
+  background-color: rgb(230, 221, 238);
   margin: 1%; /* Margen entre burbujas */
   border-radius: 100%;
-  box-shadow: 0 0 0 1px rgb(217, 217, 224), 0 0 5px rgb(165, 117, 248),
-    0 0 10px rgb(186, 87, 240);
+  box-shadow: 0 0 0 1px rgb(217, 217, 224), 0 0 5px rgb(202, 183, 234),
+    0 0 10px rgb(235, 220, 244);
 
   animation: animacionBurbujaDos 15s linear infinite;
 
@@ -268,8 +268,8 @@ nav a:hover {
 
 .burbujas-dos span:nth-child(even) {
   background-color: rgb(224, 190, 252);
-  box-shadow: 0 0 0 1px rgb(186, 122, 251), 0 0 3px rgb(153, 0, 255),
-    0 0 5px rgb(185, 28, 243);
+  box-shadow: 0 0 0 1px rgb(215, 205, 225), 0 0 3px rgb(153, 0, 255),
+    0 0 5px rgb(243, 231, 248);
   animation: animacionBurbujaDos 15s linear infinite;
   animation-duration: calc(230s / var(--i));
 }
@@ -315,7 +315,7 @@ main {
 .escribir {
   display: block;
   font-family: monospace;
-  border-right: 1px solid #000;
+  border-right: 1px solid #f4f2f2;
   white-space: nowrap;
   width: 100%;
   animation: escribir 2s steps(10), parpadeo 0.5s infinite step-end alternate;
@@ -337,7 +337,7 @@ main {
 
 .contenedor-escribirDos {
   z-index: 2; /* Asegurarse de que el contenido principal esté encima de las burbujas */
-
+color: #fff;
   margin: auto;
   display: table;
 }
@@ -345,7 +345,7 @@ main {
 .escribirDos {
   display: block;
   font-family: monospace;
-  border-right: 1px solid #000;
+  border-right: 1px solid #e7e3e3;
   white-space: nowrap;
   width: 100%;
   animation: escribirDos 2s steps(10), parpadeoDos 0.5s infinite step-end alternate;
@@ -370,4 +370,8 @@ border: 1px blue;
   outline: none;
   border: 0;
 background-color: transparent;
+}
+
+.btn-oscuro {
+  color: #fff; /* Cambia el color del texto del botón en modo oscuro */
 }
