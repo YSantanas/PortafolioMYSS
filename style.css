@@ -369,5 +369,9 @@ border: 1px blue;
 .btn-luna{
   outline: none;
   border: 0;
+  color: rgb(205, 202, 206);
 background-color: transparent;
+}
+.btn-oscuro {
+  color: #fff; /* Cambia el color del texto del botón en modo oscuro */
 }
