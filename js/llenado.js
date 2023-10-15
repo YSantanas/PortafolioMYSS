@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tu código JavaScript aquí
   
     // Define el número de cards que deseas crear (por ejemplo, 5)
-    var n = 11;
+    var n = 12;
   
     // Obtén el contenedor de las cards
     var cardContainer = document.getElementById('card-container');
@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
      "MaxVision - App",
      "Regulus - App",
      "Hedwig - App",
-     "Book Friend" ];
+     "Book Friend",
+     "Clon Google"
+     ];
   
 
      var direccion = [
@@ -33,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://github.com/YSantanas/Maxvision-Ejercicio1",
       "https://github.com/YSantanas/Ejercicio-2-ComputoMovil",
       "https://github.com/YSantanas/hedwigMovil",
-      "https://github.com/YSantanas/BookFriend"
+      "https://github.com/YSantanas/BookFriend",
+      "https://github.com/YSantanas/Clon-google"
+      
     ];
 
     var direccionYou = [
@@ -56,15 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "Página web para la venta de cursos de diferentes carreras.",
       "Página web que implementa algoritmos de Inteligencia Artificial.",
       "Página web sobre de deportes que implementa firebase.",
-      "Página web que con la base de datos de un concesionario de coche",
+      "Página web que con la base de datos de un concesionario.",
       "Página web para añadir,modificar y eliminar datos de peliculas.",
-      "Aplicación móvil que implementa la venta de productos electrónicos.",
+      "Aplicación móvil para la venta de productos electrónicos.",
       "Aplicación móvil donde podemos ver un catalogo de peliculas.",
       
       "Aplicación móvil sobre astrología que permite ver el horóscopo.",
       "Aplicación móvil que utiliza una API de Harry potter.",
       "Aplicación móvil con API de Harry potter actualizada.",
-      "Página web con cátalogo de libros y aportes."
+      "Página web con cátalogo de libros y aportes.",
+      "Página para prácticar con la clon de google."
 
       ];
 
