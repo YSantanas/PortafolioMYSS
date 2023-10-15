@@ -1,5 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+
   background: linear-gradient(
     to top,
     /* Cambia a to top para el degradado de abajo hacia arriba */
@@ -7,14 +9,12 @@ body {
     rgb(252, 251, 252) 80%
   );
 
-   display: relative;
-
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 98vh;
-
-
+  min-height: 100vh; /* Asegura que el cuerpo tenga al menos el alto de la ventana */
 }
+
 header {
   height: auto;
 
@@ -33,7 +33,19 @@ h3 {
 .imagenInicial {
   width: 200px;
   height: auto;
+
 }
+
+.imagenFin{
+  width: 150px;
+  height: auto;
+padding-right: 2%;
+
+}
+.contenedor-fin{
+  align-content: left;
+}
+
 
 /* Estilo para el contenedor del nav */
 .contenedor-opciones {
@@ -89,7 +101,7 @@ h3 {
 }
 
 nav{
-  margin-bottom: 100px; /* Ajusta este valor según tus necesidades */
+  margin-bottom: 40px; /* Ajusta este valor según tus necesidades */
   flex-direction: column;
 
   display: flex;
@@ -298,12 +310,11 @@ nav a:hover {
 
 /* Establecer estilos para el contenido principal */
 main {
+  flex-grow: 1; /* Hace que el contenido principal ocupe el espacio disponible */
   position: relative;
   z-index: 2;
-  margin-top: -100px; /* Ajusta este valor según sea necesario */
-  /* Resto de tus estilos */
+  /* Resto de tus estilos, pero elimina el margin-top: -100px; */
 }
-
 
 .contenedor-escribir {
   z-index: 2; /* Asegurarse de que el contenido principal esté encima de las burbujas */
@@ -372,6 +383,115 @@ border: 1px blue;
   color: rgb(205, 202, 206);
 background-color: transparent;
 }
+
+
 .btn-oscuro {
   color: #fff; /* Cambia el color del texto del botón en modo oscuro */
 }
+.contenedor-proyectos{
+margin: 6%;
+}
+.final-card{
+  margin: 5%;
+
+}
+
+footer {
+  margin-top: auto;
+  background-color: #f0f0f0bc;
+  text-align: center;
+  width: 100%;
+  padding: 1% 0;
+}
+
+.contacto{
+  background-color: rgb(255, 255, 255);
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  border-top-left-radius: 10px; /* Borde superior izquierdo */
+  border-top-right-radius: 10px; /* Borde superior derecho */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  border: 2px dashed #f9b1ed;
+  border-radius: 10px;
+}
+.contacto:hover{
+  box-shadow: 0 0 10px rgba(243, 114, 221, 0.5); /* Agrega un sombreado con luz */
+
+}
+  .btn-contact{
+    border: 2px solid rgb(195, 127, 195);
+    color: rgb(155, 48, 150);
+  background-color: rgb(255, 255, 255);
+  padding: 7%;
+  border-top-left-radius: 10px; /* Borde superior izquierdo */
+  border-top-right-radius: 10px; /* Borde superior derecho */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+  .btn-contact:hover{
+ 
+    color: rgb(214, 42, 189);
+    border-top: 2px solid #f9b1ed;
+    border: 2px solid rgb(236, 126, 209);
+    border-top-left-radius: 10px; /* Borde superior izquierdo */
+    border-top-right-radius: 10px; /* Borde superior derecho */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .contenedor-logos{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 35%;
+    
+  }
+  
+/* Establece el tamaño mínimo para la imagen en pantallas pequeñas */
+@media (max-width: 480px) {
+  .contenedor-logos img {
+    min-width: 10%; /* Establece el ancho mínimo de la imagen */
+    width: 30%; /* Restablece el ancho automático */
+    max-width: 15%; /* Asegura que la imagen no se desborde del contenedor */
+
+  }
+  .contenedor-logos {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    padding: 15%;
+
+  }
+}
+
+
+
+/* Estilo específico para el efecto de hover en las tarjetas con clase "card-hover" */
+.card-hover:hover {
+  /* Estilos específicos para las tarjetas con hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contenedor-total-logos{
+  margin-top: 2%;
+  margin-bottom: 2%;
+padding: 2%;
+  width: 100%;
+  background-color: #fff8fef9;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  }
+

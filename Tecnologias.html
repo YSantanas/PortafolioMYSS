@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  
+
 
   <!-- Incluir bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -39,7 +39,7 @@
             <button class="btn-luna" id="cambio-tema" onclick="cambioTema()">
               <i class="fa fa-adjust" aria-hidden="true"></i>
             </button>
-            
+
           </li>
         </ul>
 
@@ -88,32 +88,52 @@
         <div class="col-md-12">
 
           <div class="contenedor-escribirDos">
-            <h2 class="escribirDos">Tecnolgías<span>&#160;</span></h2>
+            <h2 class="escribirDos">Tecnologías<span>&#160;</span></h2>
           </div>
-        </div>
-
-        <div class="col-md-12 text-center">
-          <img class="imagenInicial" src="./imagenes/LogoPorta.png" alt="Tu Imagen">
-
         </div>
 
       </div>
     </div>
 
+    
+    <div class="contenedor-total-logos text-center">
+      <div class="row d-flex align-items-stretch justify-content-center" id="img-contenedor">
+        <!-- Aquí se crearán las cards dinámicamente -->
+      </div>
+      
+      
+    </div>
+    
 
 
   </main>
 
-    <script>
+  <script>
     // Verificar si el usuario ya ha seleccionado el modo oscuro en el pasado y aplicarlo
     const temaGuardado = localStorage.getItem('tema');
     if (temaGuardado === 'oscuro') {
-        const themeLink = document.getElementById('tema');
-        themeLink.setAttribute('href', 'styleDark.css');
+      const themeLink = document.getElementById('tema');
+      themeLink.setAttribute('href', 'styleDark.css');
     }
-</script>
- <!-- cambio a tema oscuro -->
- <script src="./js/cambio.js"></script>
+  </script>
+  <!-- cambio a tema oscuro -->
+  <script src="./js/llenadoImg.js"></script>
+  <script src="./js/cambio.js"></script>
+  <footer>
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center align-items-center contenedor-fin">
+        <img class="imagenFin" src="./imagenes/LogoPorta.png" alt="Tu Imagen">
+        <p class="m-0 ml-2">Copyright &copy; 2023 Santana Sanchez M. Yvette.</p>
+
+      </div>
+      <a href="https://github.com/YSantanas" class="ml-2"
+        style="text-decoration: none; color: #6B3A69; font-weight: bold;">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+
+
+  </footer>
 </body>
 
 </html>

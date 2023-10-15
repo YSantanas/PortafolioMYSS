@@ -24,60 +24,60 @@
 
   <header>
 
-<nav> 
-    <div class="contenedor-opciones">
+    <nav>
+      <div class="contenedor-opciones">
 
-      <img src="../imagenes/logoPortafolioMini.png" alt="Tu Imagen">
-      <ul class="nav">
-       
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./Acerca.html">Acerca</a></li>
-        <li><a href="./Tecnologias.html">Tecnologías</a></li>
-        <li><a href="./Proyectos.html">Proyectos</a></li>
-        <li><a href="./Contacto.html">Contacto</a></li>
-        <li>
-          <button class="btn-luna" id="cambio-tema" onclick="cambioTema()">
-            <i class="fa fa-adjust" aria-hidden="true"></i>
-          </button>
-          
-        </li>
-      </ul>
-    </nav>  
+        <img src="../imagenes/logoPortafolioMini.png" alt="Tu Imagen">
+        <ul class="nav">
+
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./Acerca.html">Acerca</a></li>
+          <li><a href="./Tecnologias.html">Tecnologías</a></li>
+          <li><a href="./Proyectos.html">Proyectos</a></li>
+          <li><a href="./Contacto.html">Contacto</a></li>
+          <li>
+            <button class="btn-luna" id="cambio-tema" onclick="cambioTema()">
+              <i class="fa fa-adjust" aria-hidden="true"></i>
+            </button>
+
+          </li>
+        </ul>
+    </nav>
     </div>
-  
-    </header>
+
+  </header>
 
 
 
-    <div class="contenedor-burbujas-dos">
-      <div class="burbujas-dos">
-        <span style="--i:11;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:10;"></span>
-        <span style="--i:14;"></span>
-        <span style="--i:23;"></span>
-        <span style="--i:18;"></span>
-        <span style="--i:16;"></span>
-        <span style="--i:19;"></span>
-        <span style="--i:20;"></span>
-        <span style="--i:22;"></span>
-        <span style="--i:25;"></span>
-        <span style="--i:17;"></span>
-        <span style="--i:21;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:21;"></span>
-        <span style="--i:11;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:10;"></span>
-        <span style="--i:14;"></span>
-        <span style="--i:23;"></span>
+  <div class="contenedor-burbujas-dos">
+    <div class="burbujas-dos">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
 
 
 
-      </div>
     </div>
+  </div>
 
   </header>
 
@@ -92,14 +92,17 @@
           </div>
         </div>
 
-        <div class="col-md-12 text-center">
-          <img class="imagenInicial" src="./imagenes/LogoPorta.png" alt="Tu Imagen">
-
-        </div>
-
       </div>
     </div>
 
+    <div class="contacto">
+      <p>Si deseas ponerte en contacto conmigo, puedes hacerlo a través de mi correo electrónico:</p>
+      <a href="mailto:lexsansa.com">
+        <button class="btn-contact">Contáctarme</button>
+      </a>
+      
+
+    </div>
 
 
   </main>
@@ -108,12 +111,29 @@
     // Verificar si el usuario ya ha seleccionado el modo oscuro en el pasado y aplicarlo
     const temaGuardado = localStorage.getItem('tema');
     if (temaGuardado === 'oscuro') {
-        const themeLink = document.getElementById('tema');
-        themeLink.setAttribute('href', 'styleDark.css');
+      const themeLink = document.getElementById('tema');
+      themeLink.setAttribute('href', 'styleDark.css');
     }
-</script>
- <!-- cambio a tema oscuro -->
- <script src="./js/cambio.js"></script>
+  </script>
+  <!-- cambio a tema oscuro -->
+  <script src="./js/cambio.js"></script>
+
+  <footer>
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center align-items-center contenedor-fin">
+        <img class="imagenFin" src="./imagenes/LogoPorta.png" alt="Tu Imagen">
+        <p class="m-0 ml-2">Copyright &copy; 2023 Santana Sanchez M. Yvette.</p>
+
+      </div>
+      <a href="https://github.com/YSantanas" class="ml-2"
+        style="text-decoration: none; color: #6B3A69; font-weight: bold;">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+
+
+  </footer>
+
 </body>
 
 </html>
